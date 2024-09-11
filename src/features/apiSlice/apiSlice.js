@@ -9,6 +9,8 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getBooks: builder.query({
       query: () => "/books",
+      keepUnusedDataFor: 300,
+      providesTags: ["books"]
     }),
     getBook: builder.query({
       query: (bookId) => `/books/${bookId}`,
@@ -38,7 +40,7 @@ export const apiSlice = createApi({
         url:`/books/${id}`,
         method:"delete",
     }),
-    invalidatesTags: (result, error, arg)=> ["books",{type:"book", tag:arg.id}]
+    invalidatesTags: (result, error, arg)=> ["books",{type:"book", tag: arg.id}]
    })
   }),
 });

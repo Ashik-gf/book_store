@@ -4,7 +4,7 @@
       "name": "The Last Thing He Told Me: A Novel",
       "author": "Laura Dave",
       "thumbnail": "https://m.media-amazon.com/images/P/1501171348.01._SCLZZZZZZZ_SX500_.jpg",
-      "price": 13.99,
+      "price": "140",
       "rating": 4,
       "featured": false,
       "id": 2
@@ -53,6 +53,15 @@
       "rating": "1",
       "featured": false,
       "id": 8
+    },
+    {
+      "name": "Galaxy-M31",
+      "author": "Humayoun Ahmed",
+      "thumbnail": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMWFhUXGBsaFxgXGRoaIBodFxoYFxgdGB8YHSggHR4lHRcYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy0lICUtLSstLS0tLS0tLS8tLS0tLS0tLS0tLS0tLS0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAQAAxQMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAQIDBAYAB//EAEEQAAIBAgQDBgMFBgUEAgMAAAECAwARBBIhMQVBUQYTImFxkRRSgQcjMqHRQmJyscHwJDNDkvFTgrLhNKIVRIP/xAAbAQACAwEBAQAAAAAAAAAAAAABAgADBAUGB//EAC8RAAICAQQBAgUDAwUAAAAAAAABAgMRBBIhMRNBUSIyYXGBBTOR0eHwBhQjobH/2gAMAwEAAhEDEQA/ABMwHrpoBViZvCt9TyHSqL3At1qcvovI22POuBtKy2R6VwUCoVsBYaeVODVQ0WIky0rW8iarh6fnsam1kOKg8q4AXvbWoJ8SFtfYsBf10H52qR3ptkgkxAqMJz50iyDao4ZwwNupB9QbGooyCSEdK4tTc2tNz0cNEJUAtpSqajD0x5bAm17a0drZMlkGlWqsWIDAMNiLj61IJaDg+gMezCms4qFpReoopwxYAaqbH66inUHghbuKkDCqveAbmnrIOoobGKyUzrmy3Gbe19bU4UD4kJFfvIWUkgBhpy6Xp3D8dKHCTBSGBykW3HLQ1c9O9u5MmA2aU9KjNcTVCQBZHsa6kL/WupiFaaM22v002pzgZAL3P8qgxDnY6CrFvCvS3Lz60y6Ax0S2XfWnKK5L2F6Qmqn2OgHxPDL3xzXF0LaHcrv+VCcCiMcrZgT+Eg8+h0rRcUiNhIouYze3UEWYe1BcZi42CiJCLHMRbaw12NdGiblHH+IYb8LaFXDHxGzDl+LT+QqSf",
+      "price": "300",
+      "rating": "3",
+      "featured": false,
+      "id": 9
     }
   ]
 }
