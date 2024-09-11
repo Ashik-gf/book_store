@@ -7,29 +7,33 @@ import Book from "../components/allBooks/Book";
 
 const Home = ({ search }) => {
   const { data: books, isLoading, isError } = useGetBooksQuery();
-  // what should we have
   const [featured, setFeatured] = useState(false);
-  const filterdData = books.filter((book) =>
-    book.name.toLowerCase().includes(search.toLowerCase())
-  );
-  console.log(filterdData);
-  // dataShow
+
+  // Ensure books array is defined before filtering
+  const filteredData = books
+    ? books.filter((book) =>
+        book.name.toLowerCase().includes(search?.toLowerCase())
+      )
+    : [];
+
+  console.log(filteredData);
+
+  // Handle content display
   let content;
   if (isLoading) {
     content = <PlayerLoader />;
-  }
-  if (!isLoading && isError) {
+  } else if (isError) {
     content = <Error />;
-  }
-  if (!isLoading && !isError && books?.length === 0) {
-    content = <p>No video Found</p>;
-  }
-  if (!isLoading && !isError && books?.length > 0) {
+  } else if (!isLoading && !isError && books?.length === 0) {
+    content = <p>No books found</p>;
+  } else if (books?.length > 0) {
     content =
       search?.length > 0
-        ? filterdData.map((book) => <Book key={book.id} book={book} />)
+        ? filteredData.map((book) => <Book key={book.id} book={book} />)
         : books.map((book) => <Book key={book.id} book={book} />);
   }
+
+  // Handle featured books filter
   if (!isLoading && !isError && books?.length > 0 && featured) {
     content = books
       .filter((book) => book.featured === true)
@@ -38,15 +42,15 @@ const Home = ({ search }) => {
 
   return (
     <div>
-      <Header featured={featured} setFeatured={setFeatured} />
-      <main className="py-12 px-6 2xl:px-6 container grid gird-cols-3">
-        <div className="order-2 xl:-order-1">
-          <div className="space-y-6 md:space-y-0 md:grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {content}
-          </div>
+    <Header featured={featured} setFeatured={setFeatured} />
+    <main className="py-12 px-6 2xl:px-6 container grid gird-cols-3">
+      <div className="order-2 xl:-order-1">
+        <div className="space-y-6 md:space-y-0 md:grid grid-cols-1 lg:grid-cols-3 gap-6">
+          {content}
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
+  </div>
   );
 };
 
