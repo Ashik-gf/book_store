@@ -9,11 +9,9 @@ export const apiSlice = createApi({
   endpoints: (builder) => ({
     getBooks: builder.query({
       query: () => "/books",
-      providesTags: ["books"],
     }),
     getBook: builder.query({
       query: (bookId) => `/books/${bookId}`,
-      providesTags: ["books"],
       providesTags:(result, error, arg)=>[
         {type:'video',id:arg}
       ]

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { useDeleteBookMutation } from '../../features/apiSlice/apiSlice';
 
 const Book = ({book}) => {
- 
   const {name, author,thumbnail, price, featured, id} = book;
   const [deleteBook, {isLoading, isError, error}] = useDeleteBookMutation()
 const handelDelete =()=>{
